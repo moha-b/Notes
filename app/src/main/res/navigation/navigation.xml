@@ -9,5 +9,20 @@
         android:id="@+id/mainFragment"
         android:name="home.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_addNotes"
+            app:destination="@id/addNotes"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNotes"
+        android:name="add_notes.AddNotes"
+        android:label="fragment_add__notes"
+        tools:layout="@layout/fragment_add__notes" >
+        <action
+            android:id="@+id/action_addNotes_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
 </navigation>

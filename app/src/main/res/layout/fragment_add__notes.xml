@@ -1,19 +1,100 @@
-<androidx.constraintlayout.widget.ConstraintLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="add_notes.AddNotes"
     android:background="@color/background"
     >
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="@dimen/dp8">
+        android:paddingBottom="8dp">
 
-        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp16"
+            >
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/icons"
+                android:contentDescription="@string/back_button" />
+
+            <ImageView
+                android:id="@+id/done"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/sh_circle"
+                android:contentDescription="@string/done_button"
+                android:padding="4dp"
+                android:src="@drawable/ic_done"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/icons" />
+
+            <EditText
+                android:id="@+id/create_note_title"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:hint="@string/note_title"
+                android:layout_marginTop="@dimen/dp8"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:maxLines="1"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/back"
+                app:layout_constraintStart_toStartOf="parent"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="@dimen/dp8"
+                android:background="@null"
+                android:hint="@string/what_s_on_your_mind"
+                android:importantForAutofill="no"
+                android:paddingVertical="8dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/sp15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/shape"
+                app:layout_constraintTop_toBottomOf="@id/create_note_title" />
+
+            <ImageView
+                android:id="@+id/shape"
+                android:layout_width="5dp"
+                android:layout_height="0dp"
+                android:background="@drawable/sh_colored_rect"
+                app:layout_constraintBottom_toBottomOf="@id/content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/content"
+                android:contentDescription="@string/to_define_the_note_color"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/dp16"
+        android:src="@drawable/ic_save"
+        android:backgroundTint="@color/purple_200"
+        app:tint="@color/white"
+        android:contentDescription="@string/save_note" />
+</FrameLayout>

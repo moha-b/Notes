@@ -50,6 +50,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/search_bar"
+        tools:listitem="@layout/note_layout"
         />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

@@ -5,63 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/background"
     android:padding="@dimen/dp16"
-    tools:context="home.MainFragment">
-
-    <LinearLayout
-        android:id="@+id/search_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:orientation="horizontal"
-        android:background="@drawable/search_background"
-        android:layout_marginHorizontal="@dimen/dp8"
-        android:gravity="center_vertical"
-        android:paddingHorizontal="@dimen/dp8"
-        >
-        <ImageView
-            android:id="@+id/search_icon"
-            android:src="@drawable/ic_search"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            app:tint="@color/white"
-            />
-        <EditText
-            android:id="@+id/main_search"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/search_height"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp15"
-            android:inputType="text"
-            android:layout_marginStart="@dimen/dp8"
-            android:hint="@string/search"
-            android:background="@null"
-            android:textColorHint="@color/white"
-            android:importantForAutofill="no" />
-    </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/main_recycler"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="@dimen/dp8"
-        android:paddingHorizontal="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_bar"
-        tools:listitem="@layout/note_layout"
-        />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:backgroundTint="@color/purple_200"
-        android:src="@drawable/ic_add"
-        app:tint="@color/white"
-        android:contentDescription="@string/add_new_note" />
-
+    tools:context="main_fragment.MainFragment">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package home
+package main_fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

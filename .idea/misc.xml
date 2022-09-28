@@ -4,14 +4,27 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/bottom_navigation_view.xml" value="0.129" />
+        <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/bottom_sheet_button.xml" value="0.214" />
+        <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/color1.xml" value="0.214" />
+        <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/color2.xml" value="0.214" />
+        <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/color3.xml" value="0.214" />
+        <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/color4.xml" value="0.214" />
+        <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/color5.xml" value="0.214" />
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/ic_add.xml" value="0.1435" />
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/ic_home.xml" value="0.1995" />
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/note_background.xml" value="0.129" />
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/search_background.xml" value="0.1435" />
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/sh_circle.xml" value="0.143" />
+        <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/sh_circle1.xml" value="0.214" />
+        <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/sh_circle2.xml" value="0.214" />
+        <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/sh_circle3.xml" value="0.214" />
+        <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/sh_circle4.xml" value="0.214" />
+        <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/sh_circle5.xml" value="0.214" />
+        <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/sh_circle6.xml" value="0.214" />
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/sh_colored_rect.xml" value="0.1405" />
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/layout/activity_main.xml" value="0.27395833333333336" />
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/layout/fragment_add__notes.xml" value="0.27395833333333336" />
+        <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.27395833333333336" />
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/layout/fragment_create_note.xml" value="0.27395833333333336" />
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/layout/fragment_main.xml" value="0.264" />
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/layout/note_layout.xml" value="0.2708333333333333" />

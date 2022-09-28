@@ -17,4 +17,7 @@
     <string name="home">home</string>
     <string name="profile">profile</string>
     <string name="space">space</string>
+    <string name="upload_image">Upload image</string>
+    <string name="delete">Delete Note</string>
+    <string name="what_s_in_your_mind">What\'s in your mind ?</string>
 </resources>

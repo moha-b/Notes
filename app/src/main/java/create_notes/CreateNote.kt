@@ -10,7 +10,7 @@ import com.example.noteapp.databinding.FragmentCreateNoteBinding
 
 
 class CreateNote : Fragment() {
-    lateinit var binding: FragmentCreateNoteBinding
+    private lateinit var binding: FragmentCreateNoteBinding
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentCreateNoteBinding.inflate(layoutInflater)
 

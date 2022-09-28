@@ -1,0 +1,125 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="create_notes.BottomSheet"
+    android:background="@drawable/bottom_sheet_layout">
+
+    <!-- pick a color button -->
+    <LinearLayout
+        android:id="@+id/color_picker"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/dp24">
+
+        <ImageView
+            android:id="@+id/blue"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:src="@drawable/color1"
+            android:padding="@dimen/dp5"
+            tools:ignore="ContentDescription"
+            android:layout_marginHorizontal="@dimen/dp16"
+            android:background="@drawable/sh_circle1"
+            />
+        <ImageView
+            android:id="@+id/purple"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:src="@drawable/color2"
+            android:padding="@dimen/dp5"
+            tools:ignore="ContentDescription"
+            android:layout_marginHorizontal="@dimen/dp16"
+            android:background="@drawable/sh_circle2"
+            />
+        <ImageView
+            android:id="@+id/lemon"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:src="@drawable/color3"
+            android:padding="@dimen/dp5"
+            tools:ignore="ContentDescription"
+            android:layout_marginHorizontal="@dimen/dp16"
+            android:background="@drawable/sh_circle3"
+            />
+        <ImageView
+            android:id="@+id/pink"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:src="@drawable/color4"
+            android:padding="@dimen/dp5"
+            tools:ignore="ContentDescription"
+            android:layout_marginHorizontal="@dimen/dp16"
+            android:background="@drawable/sh_circle4"
+            />
+        <ImageView
+            android:id="@+id/yellow"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:src="@drawable/color5"
+            android:padding="@dimen/dp5"
+            tools:ignore="ContentDescription"
+            android:layout_marginHorizontal="@dimen/dp16"
+            android:background="@drawable/sh_circle5"
+            />
+
+    </LinearLayout>
+
+    <!-- Upload button -->
+    <LinearLayout
+        android:id="@+id/upload_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="@dimen/dp8"
+        app:layout_constraintTop_toBottomOf="@id/color_picker"
+        android:layout_margin="@dimen/dp24"
+        android:gravity="center|left"
+        tools:ignore="RtlHardcoded,UseCompoundDrawables">
+        <ImageView
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:src="@drawable/ic_image"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/upload_image"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15"
+            android:layout_marginStart="@dimen/dp16"
+            />
+    </LinearLayout>
+
+    <!-- Delete button -->
+    <LinearLayout
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upload_image"
+        android:layout_margin="@dimen/dp24"
+        android:gravity="center|left"
+        tools:ignore="RtlHardcoded,UseCompoundDrawables">
+        <ImageView
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:src="@drawable/ic_delete"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15"
+            android:layout_marginStart="@dimen/dp16"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

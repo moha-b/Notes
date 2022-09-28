@@ -11,6 +11,10 @@
     <color name="background">#10141C</color>
     <color name="foreground">#171C26</color>
     <color name="blue">#3667f5</color>
+    <color name="purple">#9510AC</color>
+    <color name="yellow">#FAC710</color>
+    <color name="pink">#DA0063</color>
+    <color name="lemon">#CEE741</color>
 <!--    <color name="search">#343334</color>-->
     <color name="icons">#B1ABB1</color>
 </resources>

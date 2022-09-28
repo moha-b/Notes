@@ -12,8 +12,7 @@
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_mainFragment_to_addNotes"
-            app:destination="@id/addNotes"
-            app:enterAnim="@android:anim/slide_in_left" />
+            app:destination="@id/addNotes" />
     </fragment>
     <fragment
         android:id="@+id/addNotes"
@@ -22,7 +21,18 @@
         tools:layout="@layout/fragment_create_note" >
         <action
             android:id="@+id/action_addNotes_to_mainFragment"
-            app:destination="@id/mainFragment"
-            app:enterAnim="@android:anim/slide_in_left" />
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_addNotes_to_bottomSheet"
+            app:destination="@id/bottomSheet" />
     </fragment>
+    <dialog
+        android:id="@+id/bottomSheet"
+        android:name="create_notes.BottomSheet"
+        android:label="fragment_bottom_sheet"
+        tools:layout="@layout/fragment_bottom_sheet" >
+        <action
+            android:id="@+id/action_bottomSheet_to_addNotes"
+            app:destination="@id/addNotes" />
+    </dialog>
 </navigation>

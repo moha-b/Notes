@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_mainFragment_to_addNotes"
-            app:destination="@id/addNotes" />
+            app:destination="@id/addNotes"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
     </fragment>
     <fragment
         android:id="@+id/addNotes"
@@ -21,7 +25,11 @@
         tools:layout="@layout/fragment_create_note" >
         <action
             android:id="@+id/action_addNotes_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
         <action
             android:id="@+id/action_addNotes_to_bottomSheet"
             app:destination="@id/bottomSheet" />

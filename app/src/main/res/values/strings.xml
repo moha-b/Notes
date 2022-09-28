@@ -13,4 +13,8 @@
     <string name="what_s_on_your_mind">What\'s on your mind?</string>
     <string name="save_note">Save Note</string>
     <string name="search_icon">Search Icon</string>
+    <string name="favorite">favorite</string>
+    <string name="home">home</string>
+    <string name="profile">profile</string>
+    <string name="space">space</string>
 </resources>

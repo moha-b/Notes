@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:padding="@dimen/dp16"
+    android:padding="@dimen/dp8"
     tools:context="main_fragment.MainFragment">
 
     <com.makeramen.roundedimageview.RoundedImageView
@@ -17,7 +17,8 @@
         android:layout_height="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp24"
+        android:layout_marginStart="@dimen/dp16"
         app:riv_oval="true"
         android:src="@drawable/me"
         />
@@ -81,7 +82,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="0dp"
         android:padding="@dimen/dp8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,7 +91,6 @@
         app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
         app:spanCount="2"
         />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.bottomappbar.BottomAppBar
@@ -99,16 +99,29 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         app:fabAlignmentMode="end"
+        app:fabCradleRoundedCornerRadius="@dimen/dp16"
         app:backgroundTint="@color/foreground"
-        />
+        >
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="@dimen/dp24"
+            app:menu="@menu/bottom_navigation_bar_menu"
+            app:itemIconTint="@color/white"
+            app:labelVisibilityMode="unlabeled"
+            />
+    </com.google.android.material.bottomappbar.BottomAppBar>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_anchor="@id/bottom_bar"
         app:backgroundTint="@color/blue"
         android:src="@drawable/ic_add"
         app:tint="@color/white"
-        />
+        tools:ignore="ContentDescription" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

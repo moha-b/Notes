@@ -19,7 +19,7 @@
         android:id="@+id/addNotes"
         android:name="create_notes.CreateNote"
         android:label="fragment_add__notes"
-        tools:layout="@layout/fragment_add__notes" >
+        tools:layout="@layout/fragment_create_note" >
         <action
             android:id="@+id/action_addNotes_to_mainFragment"
             app:destination="@id/mainFragment"

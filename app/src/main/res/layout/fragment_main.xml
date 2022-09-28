@@ -1,8 +1,12 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/background"
     android:padding="@dimen/dp16"
     tools:context="main_fragment.MainFragment">
@@ -60,7 +64,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             app:tint="@color/white"
-            />
+            android:contentDescription="@string/search_icon" />
         <EditText
             android:id="@+id/main_search"
             android:layout_width="match_parent"
@@ -87,4 +91,24 @@
         app:spanCount="2"
         />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:fabAlignmentMode="end"
+        app:backgroundTint="@color/foreground"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/bottom_bar"
+        app:backgroundTint="@color/blue"
+        android:src="@drawable/ic_add"
+        app:tint="@color/white"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

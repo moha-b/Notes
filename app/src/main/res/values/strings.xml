@@ -12,4 +12,5 @@
     <string name="done_button">done button</string>
     <string name="what_s_on_your_mind">What\'s on your mind?</string>
     <string name="save_note">Save Note</string>
+    <string name="search_icon">Search Icon</string>
 </resources>

@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/bottom_navigation_view.xml" value="0.129" />
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/bottom_sheet_button.xml" value="0.214" />
+        <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/bottom_sheet_layout.xml" value="0.1875" />
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/color1.xml" value="0.214" />
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/color2.xml" value="0.214" />
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/color3.xml" value="0.214" />
@@ -22,6 +23,7 @@
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/sh_circle5.xml" value="0.214" />
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/sh_circle6.xml" value="0.214" />
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/drawable/sh_colored_rect.xml" value="0.1405" />
+        <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/layout-v31/fragment_bottom_sheet.xml" value="0.27291666666666664" />
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/layout/activity_main.xml" value="0.27395833333333336" />
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/layout/fragment_add__notes.xml" value="0.27395833333333336" />
         <entry key="..\:/Git-Hub/Android Studio/Kotlin/Notes/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.27395833333333336" />

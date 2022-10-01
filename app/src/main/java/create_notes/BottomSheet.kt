@@ -16,8 +16,6 @@ class BottomSheet : BottomSheetDialogFragment() {
 
 
 
-
-
         return binding.root
     }
 

@@ -52,7 +52,7 @@
         tools:ignore="ContentDescription" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/bottom_sheet_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -62,7 +62,6 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/bottom_sheet_button"
             android:layout_width="80dp"
             android:layout_height="@dimen/dp8"
             android:src="@drawable/bottom_sheet_button"
@@ -74,7 +73,7 @@
         android:id="@+id/save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dp24"
+        android:layout_margin="@dimen/dp30"
         android:backgroundTint="@color/blue"
         android:src="@drawable/ic_save"
         app:tint="@color/white"

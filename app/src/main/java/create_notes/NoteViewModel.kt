@@ -12,7 +12,7 @@ import model.Notes
 
 class NoteViewModel(application: Application): AndroidViewModel(application) {
 
-    private val readAllData: LiveData<List<Notes>>
+    val readAllData: LiveData<List<Notes>>
     private val repository: Repository
 
     init {
@@ -24,6 +24,12 @@ class NoteViewModel(application: Application): AndroidViewModel(application) {
     fun addNote(note: Notes){
         viewModelScope.launch(Dispatchers.IO) {
             repository.addNote(note)
+        }
+    }
+
+    fun deleteNote(note: Notes){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteNote(note)
         }
     }
 

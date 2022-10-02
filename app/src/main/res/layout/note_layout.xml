@@ -52,14 +52,12 @@
                 android:id="@+id/note_title"
                 app:layout_constraintStart_toEndOf="@id/post_owner"
                 app:layout_constraintBottom_toBottomOf="@id/post_owner"
-                android:text="Note Title"
                 style="@style/noteTitle" />
 
             <TextView
                 android:id="@+id/note_content"
                 app:layout_constraintStart_toStartOf="@id/post_owner"
                 app:layout_constraintTop_toBottomOf="@id/post_owner"
-                android:text="this is the note content just leave this hard coded text here"
                 style="@style/noteContent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

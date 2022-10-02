@@ -33,52 +33,34 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/post_owner"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-
                 app:riv_oval="true"
                 android:src="@drawable/me"
                 />
             <TextView
                 android:id="@+id/userName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 app:layout_constraintStart_toEndOf="@id/post_owner"
                 app:layout_constraintTop_toTopOf="@id/post_owner"
                 android:text="Mohab Khalid"
-                android:textColor="@color/white"
-                android:textSize="19sp"
-                android:layout_marginStart="@dimen/dp8"
-                />
+                style="@style/userName" />
             <TextView
                 android:id="@+id/note_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 app:layout_constraintStart_toEndOf="@id/post_owner"
                 app:layout_constraintBottom_toBottomOf="@id/post_owner"
                 android:text="Note Title"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp15"
-                android:layout_marginStart="@dimen/dp8"
-                />
+                style="@style/noteTitle" />
 
             <TextView
                 android:id="@+id/note_content"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="@id/post_owner"
                 app:layout_constraintTop_toBottomOf="@id/post_owner"
-                android:layout_marginTop="@dimen/dp8"
                 android:text="this is the note content just leave this hard coded text here"
-                android:ellipsize="marquee"
-                android:textColor="@color/white"
-                />
-
+                style="@style/noteContent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

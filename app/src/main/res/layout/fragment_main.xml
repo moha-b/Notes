@@ -4,12 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
 <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background"
-    android:padding="@dimen/dp8"
-    tools:context="main_fragment.MainFragment">
+    tools:context="main_fragment.MainFragment"
+    style="@style/mainFragment">
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/image_profile"
@@ -48,36 +46,20 @@
 
     <LinearLayout
         android:id="@+id/search_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/image_profile"
-        android:orientation="horizontal"
-        android:background="@drawable/search_background"
-        android:layout_marginTop="@dimen/dp16"
-        android:layout_marginHorizontal="@dimen/dp8"
-        android:gravity="center_vertical"
-        android:paddingHorizontal="@dimen/dp8"
-        >
+        style="@style/searchBar">
         <ImageView
             android:id="@+id/search_icon"
             android:src="@drawable/ic_search"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
             app:tint="@color/white"
-            android:contentDescription="@string/search_icon" />
+            style="@style/searchBarIcon"
+            tools:ignore="ContentDescription" />
         <EditText
             android:id="@+id/main_search"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/search_height"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp15"
-            android:inputType="text"
-            android:layout_marginStart="@dimen/dp8"
             android:hint="@string/search"
-            android:background="@null"
-            android:textColorHint="@color/white"
-            android:importantForAutofill="no" />
+            style="@style/searchBarEditText"
+            tools:ignore="Autofill" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -104,14 +86,10 @@
         >
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:layout_marginStart="@dimen/dp24"
             app:menu="@menu/bottom_navigation_bar_menu"
             app:itemIconTint="@color/white"
             app:labelVisibilityMode="unlabeled"
-            />
+            style="@style/bottomNavigationBar" />
     </com.google.android.material.bottomappbar.BottomAppBar>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

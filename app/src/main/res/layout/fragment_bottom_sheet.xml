@@ -11,63 +11,42 @@
     <!-- pick a color button -->
     <LinearLayout
         android:id="@+id/color_picker"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="@dimen/dp8">
+        style="@style/ColorPicker">
 
         <ImageView
             android:id="@+id/blue"
-            style="@style/Base.CardView"
-            android:layout_width="@dimen/dp30"
-            android:layout_height="@dimen/dp30"
             android:src="@drawable/color1"
-            android:padding="@dimen/dp5"
             tools:ignore="ContentDescription"
-            android:layout_marginHorizontal="@dimen/dp16"
             android:background="@drawable/sh_circle1"
+            style="@style/color"
             />
         <ImageView
             android:id="@+id/purple"
-            android:layout_width="@dimen/dp30"
-            android:layout_height="@dimen/dp30"
             android:src="@drawable/color2"
-            android:padding="@dimen/dp5"
-            tools:ignore="ContentDescription"
-            android:layout_marginHorizontal="@dimen/dp16"
+            style="@style/color"
             android:background="@drawable/sh_circle2"
-            />
+            tools:ignore="ContentDescription" />
         <ImageView
             android:id="@+id/lemon"
-            android:layout_width="@dimen/dp30"
-            android:layout_height="@dimen/dp30"
+            style="@style/color"
             android:src="@drawable/color3"
-            android:padding="@dimen/dp5"
             tools:ignore="ContentDescription"
-            android:layout_marginHorizontal="@dimen/dp16"
             android:background="@drawable/sh_circle3"
             />
         <ImageView
             android:id="@+id/pink"
-            android:layout_width="@dimen/dp30"
-            android:layout_height="@dimen/dp30"
+            style="@style/color"
             android:src="@drawable/color4"
-            android:padding="@dimen/dp5"
             tools:ignore="ContentDescription"
-            android:layout_marginHorizontal="@dimen/dp16"
             android:background="@drawable/sh_circle4"
             />
         <ImageView
             android:id="@+id/yellow"
-            android:layout_width="@dimen/dp30"
-            android:layout_height="@dimen/dp30"
+            style="@style/color"
             android:src="@drawable/color5"
-            android:padding="@dimen/dp5"
             tools:ignore="ContentDescription"
-            android:layout_marginHorizontal="@dimen/dp16"
             android:background="@drawable/sh_circle5"
             />
     </LinearLayout>
@@ -75,14 +54,10 @@
     <!-- Upload button -->
     <LinearLayout
         android:id="@+id/upload_image"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        android:padding="@dimen/dp8"
         app:layout_constraintTop_toBottomOf="@id/color_picker"
-        android:layout_margin="@dimen/dp16"
-        android:gravity="center|left"
-        tools:ignore="RtlHardcoded,UseCompoundDrawables">
+        tools:ignore="RtlHardcoded,UseCompoundDrawables"
+        style="@style/bottomSheetItem">
         <ImageView
             android:layout_width="@dimen/dp30"
             android:layout_height="@dimen/dp30"
@@ -101,14 +76,10 @@
     <!-- Delete button -->
     <LinearLayout
         android:id="@+id/delete"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/dp8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/upload_image"
-        android:layout_margin="@dimen/dp16"
-        android:gravity="center|left"
-        tools:ignore="RtlHardcoded,UseCompoundDrawables">
+        tools:ignore="RtlHardcoded,UseCompoundDrawables"
+        style="@style/bottomSheetItem">
         <ImageView
             android:layout_width="@dimen/dp30"
             android:layout_height="@dimen/dp30"

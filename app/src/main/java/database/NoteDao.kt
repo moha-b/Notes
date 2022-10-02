@@ -1,5 +1,6 @@
 package database
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import model.Notes
 
@@ -7,7 +8,7 @@ import model.Notes
 interface NoteDao {
 
     @get:Query("select * from Notes")
-    val allNotes: List<Notes>
+    val getAllNotesList: LiveData<List<Notes>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertNote(Notes:Notes)

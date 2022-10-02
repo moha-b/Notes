@@ -18,31 +18,24 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
 
-    <TextView
+    <EditText
         android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:hint="Note Title"
-        android:layout_marginTop="@dimen/dp24"
-        android:layout_marginStart="@dimen/dp16"
-        android:padding="@dimen/dp8"
-        android:textColorHint="@color/white"
-        android:textSize="@dimen/sp20"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/back" />
+        app:layout_constraintTop_toBottomOf="@id/back"
+        tools:ignore="Autofill"
+        style="@style/Title" />
 
-    <TextView
+    <EditText
         android:id="@+id/content"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:hint="@string/what_s_in_your_mind"
-        android:padding="@dimen/dp8"
-        android:textColorHint="@color/white"
         app:layout_constraintStart_toStartOf="@id/title"
-        app:layout_constraintTop_toBottomOf="@id/title" />
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:ignore="Autofill"
+        style="@style/Content" />
 
     <ImageView
-        android:id="@+id/user_image"
+        android:id="@+id/the_uploaded_image"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="@dimen/dp16"
@@ -53,13 +46,10 @@
 
     <LinearLayout
         android:id="@+id/bottom_sheet_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="@dimen/dp16"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/bottomSheet">
 
         <ImageView
             android:layout_width="80dp"

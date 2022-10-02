@@ -11,10 +11,8 @@ class BottomSheet : BottomSheetDialogFragment() {
 
     private lateinit var binding: FragmentBottomSheetBinding
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View{
         binding = FragmentBottomSheetBinding.inflate(layoutInflater)
-
-
 
         return binding.root
     }

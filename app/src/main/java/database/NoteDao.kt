@@ -1,18 +1,19 @@
 package database
 
 import androidx.lifecycle.LiveData
-import androidx.room.*
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
 import model.Notes
 
 @Dao
 interface NoteDao {
 
-    @get:Query("select * from Notes")
-    val getAllNotesList: LiveData<List<Notes>>
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun addUser(user: Notes)
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertNote(Notes:Notes)
+    @Query("SELECT * FROM Notes ORDER BY id ASC")
+    fun readAllData(): LiveData<List<Notes>>
 
-    @Delete
-    suspend fun delete(Notes: Notes)
 }

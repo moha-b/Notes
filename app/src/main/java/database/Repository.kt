@@ -1,6 +1,7 @@
 package database
 
 import androidx.lifecycle.LiveData
+import kotlinx.coroutines.flow.Flow
 import model.Notes
 
 class Repository(private val noteDao: NoteDao) {
@@ -9,6 +10,10 @@ class Repository(private val noteDao: NoteDao) {
 
     suspend fun addNote(user: Notes){
         noteDao.addNote(user)
+    }
+
+    suspend fun search(search: String): Flow<List<Notes>>{
+        return noteDao.search(search)
     }
 
     suspend fun updateNote(notes: Notes){

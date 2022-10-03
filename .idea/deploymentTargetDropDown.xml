@@ -6,12 +6,12 @@
         <type value="RUNNING_DEVICE_TARGET" />
         <deviceKey>
           <Key>
-            <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\mohab\.android\avd\Pixel_4.avd" />
+            <type value="SERIAL_NUMBER" />
+            <value value="adb-RF8N802C03D-y2k6b7._adb-tls-connect._tcp" />
           </Key>
         </deviceKey>
       </Target>
     </runningDeviceTargetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2022-10-03T06:49:57.998954600Z" />
+    <timeTargetWasSelectedWithDropDown value="2022-10-03T13:48:23.960806500Z" />
   </component>
 </project>

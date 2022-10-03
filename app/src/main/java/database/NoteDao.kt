@@ -2,6 +2,7 @@ package database
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import kotlinx.coroutines.flow.Flow
 import model.Notes
 
 @Dao
@@ -12,6 +13,9 @@ interface NoteDao {
 
     @Query("SELECT * FROM Notes ORDER BY id ASC")
     fun readAllData(): LiveData<List<Notes>>
+
+    @Query("select * from Notes where title like :search")
+    fun search(search: String): Flow<List<Notes>>
 
     @Update
     suspend fun updateNote(notes: Notes)

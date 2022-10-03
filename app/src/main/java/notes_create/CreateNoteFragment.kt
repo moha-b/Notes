@@ -25,16 +25,12 @@ class CreateNoteFragment : Fragment() {
         // ViewModel
         viewModel = ViewModelProvider(requireActivity())[NoteViewModel::class.java]
 
-
         // Navigation
         binding.createSave.setOnClickListener {
             // Add new Note in Home Page
             newNote()
-            findNavController().navigate(R.id.action_addNotes_to_mainFragment)
         }
         binding.createBack.setOnClickListener { findNavController().navigate(R.id.action_addNotes_to_mainFragment) }
-        binding.createBottomSheetButton.setOnClickListener { findNavController().navigate(R.id.action_addNotes_to_bottomSheet) }
-
 
 
         return binding.root
@@ -42,17 +38,19 @@ class CreateNoteFragment : Fragment() {
 
     private fun newNote(){
         val title = binding.createTitle.text.toString()
-        val content = "                 ${binding.createContent.text}"
+        val content = binding.createContent.text.toString()
         //val image = binding.theUploadedImage
         // if it's not empty
         if(checkNote(title,content)){
             val note = Notes(0,title,content)
             viewModel.addNote(note)
-            Toast.makeText(requireContext(),"done",Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.action_addNotes_to_mainFragment)
+            Toast.makeText(requireContext(),"successfully, created",Toast.LENGTH_SHORT).show()
         }else{
             Toast.makeText(requireContext(),"something wont wrong",Toast.LENGTH_SHORT).show()
         }
     }
+
     // useless fun but maybe ues it later
     private fun checkNote(title:String, content:String): Boolean {
         return !(TextUtils.isEmpty(title) && TextUtils.isEmpty(content))

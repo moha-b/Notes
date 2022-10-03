@@ -3,7 +3,9 @@ package main_fragment
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.noteapp.databinding.FragmentMainBinding
 import com.example.noteapp.databinding.NoteLayoutBinding
 import model.Notes
 
@@ -28,6 +30,11 @@ class Adapter: RecyclerView.Adapter<Adapter.MyViewHolder>() {
         Holder.binding.apply {
             noteTitle.text = item.title
             noteContent.text = item.content
+
+            note.setOnClickListener {
+                val action = MainFragmentDirections.actionMainFragmentToUpdateNoteFragment(item)
+                Holder.binding.note.findNavController().navigate(action)
+            }
         }
     }
 

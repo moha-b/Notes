@@ -17,10 +17,18 @@
             app:exitAnim="@anim/to_left"
             app:popEnterAnim="@anim/from_left"
             app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_updateNoteFragment"
+            app:destination="@id/updateNoteFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
+
     <fragment
         android:id="@+id/addNotes"
-        android:name="create_notes.CreateNote"
+        android:name="notes_create.CreateNoteFragment"
         android:label="fragment_add__notes"
         tools:layout="@layout/fragment_create_note" >
         <action
@@ -34,13 +42,37 @@
             android:id="@+id/action_addNotes_to_bottomSheet"
             app:destination="@id/bottomSheet" />
     </fragment>
+
     <dialog
         android:id="@+id/bottomSheet"
-        android:name="create_notes.BottomSheet"
+        android:name="notes_create.BottomSheet"
         android:label="fragment_bottom_sheet"
         tools:layout="@layout/fragment_bottom_sheet" >
         <action
             android:id="@+id/action_bottomSheet_to_addNotes"
             app:destination="@id/addNotes" />
+        <action
+            android:id="@+id/action_bottomSheet_to_updateNoteFragment"
+            app:destination="@id/updateNoteFragment" />
     </dialog>
+
+    <fragment
+        android:id="@+id/updateNoteFragment"
+        android:name="notes_update.UpdateNoteFragment"
+        android:label="fragment_update"
+        tools:layout="@layout/fragment_update" >
+        <action
+            android:id="@+id/action_updateNoteFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_updateNoteFragment_to_bottomSheet"
+            app:destination="@id/bottomSheet" />
+        <argument
+            android:name="currentNote"
+            app:argType="model.Notes" />
+    </fragment>
 </navigation>

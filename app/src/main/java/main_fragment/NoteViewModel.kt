@@ -1,4 +1,4 @@
-package create_notes
+package main_fragment
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -24,6 +24,12 @@ class NoteViewModel(application: Application): AndroidViewModel(application) {
     fun addNote(note: Notes){
         viewModelScope.launch(Dispatchers.IO) {
             repository.addNote(note)
+        }
+    }
+
+    fun updateNote(note: Notes){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.updateNote(note)
         }
     }
 

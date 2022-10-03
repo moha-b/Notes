@@ -13,6 +13,9 @@ interface NoteDao {
     @Query("SELECT * FROM Notes ORDER BY id ASC")
     fun readAllData(): LiveData<List<Notes>>
 
+    @Update
+    suspend fun updateNote(notes: Notes)
+
     @Delete
     suspend fun deleteNote(notes: Notes)
 

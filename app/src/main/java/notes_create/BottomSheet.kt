@@ -1,14 +1,13 @@
-package create_notes
+package notes_create
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.noteapp.databinding.FragmentBottomSheetBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import main_fragment.Adapter
+import main_fragment.NoteViewModel
 
 class BottomSheet : BottomSheetDialogFragment() {
 

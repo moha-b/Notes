@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="notes_create.CreateNoteFragment"
+    tools:context="notes_update.UpdateNoteFragment"
     android:background="@color/background"
     >
     <ImageView
-        android:id="@+id/create_back"
+        android:id="@+id/update_back"
         android:layout_width="@dimen/dp24"
         android:layout_height="@dimen/dp24"
         android:layout_margin="@dimen/dp24"
@@ -18,33 +18,33 @@
         tools:ignore="ContentDescription" />
 
     <EditText
-        android:id="@+id/create_title"
+        android:id="@+id/update_title"
         android:hint="@string/note_title"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/create_back"
+        app:layout_constraintTop_toBottomOf="@id/update_back"
         tools:ignore="Autofill"
         style="@style/Title" />
 
     <EditText
-        android:id="@+id/create_content"
+        android:id="@+id/update_content"
         style="@style/Content"
-        app:layout_constraintBottom_toTopOf="@id/create_the_uploaded_image"
-        app:layout_constraintStart_toStartOf="@id/create_title"
-        app:layout_constraintTop_toBottomOf="@id/create_title"
+        app:layout_constraintBottom_toTopOf="@id/update_the_uploaded_image"
+        app:layout_constraintStart_toStartOf="@id/update_title"
+        app:layout_constraintTop_toBottomOf="@id/update_title"
         tools:ignore="Autofill" />
 
     <ImageView
-        android:id="@+id/create_the_uploaded_image"
+        android:id="@+id/update_the_uploaded_image"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="@dimen/dp16"
-        app:layout_constraintTop_toBottomOf="@id/create_content"
+        app:layout_constraintTop_toBottomOf="@id/update_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="ContentDescription" />
 
     <LinearLayout
-        android:id="@+id/create_bottom_sheet_button"
+        android:id="@+id/update_bottom_sheet_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +59,7 @@
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/create_save"
+        android:id="@+id/update_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp30"

@@ -4,7 +4,8 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/note_background"
-    android:layout_margin="@dimen/dp8">
+    android:layout_margin="@dimen/dp8"
+    android:id="@+id/note">
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/image_note"

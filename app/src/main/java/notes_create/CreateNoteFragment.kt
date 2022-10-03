@@ -1,4 +1,4 @@
-package create_notes
+package notes_create
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -11,10 +11,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.noteapp.R
 import com.example.noteapp.databinding.FragmentCreateNoteBinding
+import main_fragment.NoteViewModel
 import model.Notes
 
 
-class CreateNote : Fragment() {
+class CreateNoteFragment : Fragment() {
     private lateinit var viewModel: NoteViewModel
     private lateinit var binding: FragmentCreateNoteBinding
 
@@ -26,12 +27,13 @@ class CreateNote : Fragment() {
 
 
         // Navigation
-        binding.save.setOnClickListener {
+        binding.createSave.setOnClickListener {
+            // Add new Note in Home Page
             newNote()
             findNavController().navigate(R.id.action_addNotes_to_mainFragment)
         }
-        binding.back.setOnClickListener { findNavController().navigate(R.id.action_addNotes_to_mainFragment) }
-        binding.bottomSheetButton.setOnClickListener { findNavController().navigate(R.id.action_addNotes_to_bottomSheet) }
+        binding.createBack.setOnClickListener { findNavController().navigate(R.id.action_addNotes_to_mainFragment) }
+        binding.createBottomSheetButton.setOnClickListener { findNavController().navigate(R.id.action_addNotes_to_bottomSheet) }
 
 
 
@@ -39,8 +41,8 @@ class CreateNote : Fragment() {
     }
 
     private fun newNote(){
-        val title = binding.title.text.toString()
-        val content = "                 ${binding.content.text}"
+        val title = binding.createTitle.text.toString()
+        val content = "                 ${binding.createContent.text}"
         //val image = binding.theUploadedImage
         // if it's not empty
         if(checkNote(title,content)){
@@ -51,7 +53,7 @@ class CreateNote : Fragment() {
             Toast.makeText(requireContext(),"something wont wrong",Toast.LENGTH_SHORT).show()
         }
     }
-
+    // useless fun but maybe ues it later
     private fun checkNote(title:String, content:String): Boolean {
         return !(TextUtils.isEmpty(title) && TextUtils.isEmpty(content))
     }

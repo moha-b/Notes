@@ -7,7 +7,6 @@
     tools:context="create_notes.CreateNote"
     android:background="@color/background"
     >
-
     <ImageView
         android:id="@+id/back"
         android:layout_width="@dimen/dp24"
@@ -20,7 +19,7 @@
 
     <EditText
         android:id="@+id/title"
-        android:hint="Note Title"
+        android:hint="Note title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/back"
         tools:ignore="Autofill"
@@ -28,11 +27,11 @@
 
     <EditText
         android:id="@+id/content"
-        android:hint="@string/what_s_in_your_mind"
+        style="@style/Content"
+        app:layout_constraintBottom_toTopOf="@id/the_uploaded_image"
         app:layout_constraintStart_toStartOf="@id/title"
         app:layout_constraintTop_toBottomOf="@id/title"
-        tools:ignore="Autofill"
-        style="@style/Content" />
+        tools:ignore="Autofill" />
 
     <ImageView
         android:id="@+id/the_uploaded_image"

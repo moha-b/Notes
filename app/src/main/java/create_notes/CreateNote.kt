@@ -40,7 +40,7 @@ class CreateNote : Fragment() {
 
     private fun newNote(){
         val title = binding.title.text.toString()
-        val content = binding.content.text.toString()
+        val content = "                 ${binding.content.text}"
         //val image = binding.theUploadedImage
         // if it's not empty
         if(checkNote(title,content)){

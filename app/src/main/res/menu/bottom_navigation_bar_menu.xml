@@ -19,7 +19,7 @@
     <item
         android:id="@+id/user"
         android:title="@string/profile"
-        android:icon="@drawable/ic_person"
+        android:icon="@drawable/ic_user"
         app:showAsAction="ifRoom"
         />
 

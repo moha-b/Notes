@@ -9,9 +9,11 @@
     >
     <ImageView
         android:id="@+id/update_back"
-        android:layout_width="@dimen/dp24"
-        android:layout_height="@dimen/dp24"
-        android:layout_margin="@dimen/dp24"
+        android:padding="@dimen/dp13"
+        android:layout_width="@dimen/dp50"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginVertical="@dimen/dp24"
         android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -44,15 +46,17 @@
         tools:ignore="ContentDescription" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/update_save"
+        android:id="@+id/update_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp30"
-        app:backgroundTint="@color/blue"
+        android:clickable="true"
+        android:focusable="true"
         android:src="@drawable/ic_edit"
-        app:tint="@color/white"
+        app:backgroundTint="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white"
         tools:ignore="ContentDescription" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -67,24 +71,42 @@
         android:visibility="invisible"
         app:backgroundTint="@color/lightBlue"
         app:flow_verticalAlign="center"
-        app:layout_constraintBottom_toTopOf="@+id/update_save"
-        app:layout_constraintEnd_toEndOf="@+id/update_save"
-        app:layout_constraintStart_toStartOf="@+id/update_save"
+        app:layout_constraintBottom_toTopOf="@+id/update_edit"
+        app:layout_constraintEnd_toEndOf="@+id/update_edit"
+        app:layout_constraintStart_toStartOf="@+id/update_edit"
         app:tint="@color/white" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/update_upload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
         android:clickable="true"
         android:contentDescription="@string/upload_image"
         android:focusable="true"
-        android:visibility="invisible"
         android:src="@drawable/ic_upload_image"
+        android:visibility="invisible"
         app:backgroundTint="@color/lightBlue"
-        app:layout_constraintBottom_toTopOf="@+id/update_delete"
-        app:layout_constraintEnd_toEndOf="@+id/update_delete"
-        app:layout_constraintStart_toStartOf="@+id/update_delete"
+        app:layout_constraintBottom_toBottomOf="@+id/update_delete"
+        app:layout_constraintEnd_toStartOf="@+id/update_delete"
+        app:layout_constraintStart_toStartOf="@+id/update_color_me"
+        app:layout_constraintTop_toTopOf="@+id/update_delete"
         app:tint="@color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/update_color_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:visibility="invisible"
+        android:clickable="true"
+        android:focusable="true"
+        app:backgroundTint="@color/lightBlue"
+        android:src="@drawable/ic_color"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/update_edit"
+        app:layout_constraintEnd_toStartOf="@+id/update_edit"
+        app:layout_constraintTop_toTopOf="@+id/update_edit"
+        android:contentDescription="@string/color_my_note" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

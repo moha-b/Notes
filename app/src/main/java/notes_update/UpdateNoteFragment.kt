@@ -23,9 +23,14 @@ class UpdateNoteFragment : Fragment() {
     private lateinit var binding: FragmentUpdateBinding
     private lateinit var viewModel: NoteViewModel
     private val args by navArgs<UpdateNoteFragmentArgs>()
-    private val rotate: Animation by lazy { AnimationUtils.loadAnimation(requireContext(),R.anim.rotate) }
+    private val rotateOpen: Animation by lazy { AnimationUtils.loadAnimation(requireContext(),R.anim.rotate_open) }
+    private val rotateClose: Animation by lazy { AnimationUtils.loadAnimation(requireContext(),R.anim.rotate_close) }
     private val fromBottom: Animation by lazy { AnimationUtils.loadAnimation(requireContext(),R.anim.from_bottom) }
     private val toBottom: Animation by lazy { AnimationUtils.loadAnimation(requireContext(),R.anim.to_bottom) }
+    private val fromLeft: Animation by lazy { AnimationUtils.loadAnimation(requireContext(),R.anim.fab_from_left) }
+    private val toLeft: Animation by lazy { AnimationUtils.loadAnimation(requireContext(),R.anim.fab_to_left) }
+    private val fromAngel: Animation by lazy { AnimationUtils.loadAnimation(requireContext(),R.anim.fab_from_angel) }
+    private val toAngel: Animation by lazy { AnimationUtils.loadAnimation(requireContext(),R.anim.fab_to_angel) }
     private var clicked = false
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View{
@@ -39,8 +44,8 @@ class UpdateNoteFragment : Fragment() {
         viewModel = ViewModelProvider(requireActivity())[NoteViewModel::class.java]
 
         // Navigation
-        binding.updateBack.setOnClickListener { findNavController().navigate(R.id.action_updateNoteFragment_to_mainFragment) }
-        binding.updateSave.setOnClickListener {
+        binding.updateBack.setOnClickListener { updateData() }
+        binding.updateEdit.setOnClickListener {
             clicked = !clicked
             setVisibility(clicked)
             setAnimation(clicked)
@@ -63,10 +68,10 @@ class UpdateNoteFragment : Fragment() {
         if(checkNote(title,content)){
             val note = Notes(args.currentNote.id,title,content)
             viewModel.updateNote(note)
-            Toast.makeText(requireContext(),"successfully, updated", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(requireContext(),"successfully, updated", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_updateNoteFragment_to_mainFragment)
         }else{
-            Toast.makeText(requireContext(),"something wont wrong", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(),"something went wrong", Toast.LENGTH_SHORT).show()
         }
     }
     // useless fun but maybe ues it later
@@ -78,9 +83,11 @@ class UpdateNoteFragment : Fragment() {
         if (clicked){
             binding.updateDelete.visibility = View.VISIBLE
             binding.updateUpload.visibility = View.VISIBLE
+            binding.updateColorMe.visibility = View.VISIBLE
         }else{
             binding.updateDelete.visibility = View.INVISIBLE
             binding.updateUpload.visibility = View.INVISIBLE
+            binding.updateColorMe.visibility = View.INVISIBLE
         }
     }
 
@@ -88,21 +95,25 @@ class UpdateNoteFragment : Fragment() {
         if (clicked){
             binding.updateDelete.isClickable = true
             binding.updateUpload.isClickable = true
+            binding.updateColorMe.isClickable = true
         }else{
             binding.updateDelete.isClickable = false
             binding.updateUpload.isClickable = false
+            binding.updateColorMe.isClickable = false
         }
     }
 
     private fun setAnimation(clicked: Boolean) {
         if (clicked){
-            binding.updateSave.startAnimation(rotate)
+            binding.updateEdit.startAnimation(rotateOpen)
             binding.updateDelete.startAnimation(fromBottom)
-            binding.updateUpload.startAnimation(fromBottom)
+            binding.updateUpload.startAnimation(fromAngel)
+            binding.updateColorMe.startAnimation(fromLeft)
         }else{
-            binding.updateSave.startAnimation(rotate)
+            binding.updateEdit.startAnimation(rotateClose)
             binding.updateDelete.startAnimation(toBottom)
-            binding.updateUpload.startAnimation(toBottom)
+            binding.updateUpload.startAnimation(toAngel)
+            binding.updateColorMe.startAnimation(toLeft)
         }
     }
 

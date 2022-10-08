@@ -6,16 +6,57 @@
     android:layout_height="match_parent"
     tools:context="notes_create.CreateNoteFragment"
     android:background="@color/background"
+    android:id="@+id/create_layout"
     >
+
     <ImageView
         android:id="@+id/create_back"
-        android:layout_width="@dimen/dp24"
-        android:layout_height="@dimen/dp24"
-        android:layout_margin="@dimen/dp24"
         android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"
+        style="@style/back_button" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp16"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/create_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/create_blue"
+            style="@style/colors"
+            android:background="@drawable/color1"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/create_purple"
+            style="@style/colors"
+            android:background="@drawable/color2"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/create_lemon"
+            style="@style/colors"
+            android:background="@drawable/color3"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/create_pink"
+            style="@style/colors"
+            android:background="@drawable/color4"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/create_yellow"
+            style="@style/colors"
+            android:background="@drawable/color5"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
 
     <EditText
         android:id="@+id/create_title"
@@ -45,19 +86,53 @@
         tools:ignore="ContentDescription" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/create_save"
+        android:id="@+id/create_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
+        android:layout_margin="@dimen/dp30"
         android:clickable="true"
-        android:contentDescription="@string/fab_transformation_scrim_behavior"
         android:focusable="true"
-        android:src="@drawable/ic_add"
+        android:src="@drawable/ic_edit"
         app:backgroundTint="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:tint="@android:color/white" />
+        app:tint="@color/white"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/create_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp5"
+        android:clickable="true"
+        android:contentDescription="@string/upload_image"
+        android:focusable="true"
+        android:src="@drawable/ic_upload_image"
+        android:visibility="invisible"
+        app:backgroundTint="@color/lightBlue"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toTopOf="@+id/create_edit"
+        app:layout_constraintEnd_toEndOf="@+id/create_edit"
+        app:layout_constraintStart_toStartOf="@+id/create_edit"
+        app:tint="@color/white" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/create_color_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:visibility="invisible"
+        android:clickable="true"
+        android:focusable="true"
+        app:backgroundTint="@color/lightBlue"
+        android:src="@drawable/ic_color"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/create_edit"
+        app:layout_constraintEnd_toStartOf="@+id/create_edit"
+        app:layout_constraintTop_toTopOf="@+id/create_edit"
+        android:contentDescription="@string/color_my_note" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

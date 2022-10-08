@@ -12,6 +12,7 @@
     <color name="foreground">#171C26</color>
     <color name="blue">#3667f5</color>
     <color name="lightBlue">#B33667F5</color>
+    <color name="darkBlue">#B3021F73</color>
     <color name="purple">#9510AC</color>
     <color name="yellow">#FAC710</color>
     <color name="pink">#DA0063</color>

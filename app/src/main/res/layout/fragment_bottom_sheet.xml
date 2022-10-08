@@ -15,40 +15,40 @@
         app:layout_constraintTop_toTopOf="parent"
         style="@style/ColorPicker">
 
-        <ImageView
-            android:id="@+id/blue"
-            android:src="@drawable/color1"
-            tools:ignore="ContentDescription"
-            android:background="@drawable/sh_circle1"
-            style="@style/color"
-            />
-        <ImageView
-            android:id="@+id/purple"
-            android:src="@drawable/color2"
-            style="@style/color"
-            android:background="@drawable/sh_circle2"
-            tools:ignore="ContentDescription" />
-        <ImageView
-            android:id="@+id/lemon"
-            style="@style/color"
-            android:src="@drawable/color3"
-            tools:ignore="ContentDescription"
-            android:background="@drawable/sh_circle3"
-            />
-        <ImageView
-            android:id="@+id/pink"
-            style="@style/color"
-            android:src="@drawable/color4"
-            tools:ignore="ContentDescription"
-            android:background="@drawable/sh_circle4"
-            />
-        <ImageView
-            android:id="@+id/yellow"
-            style="@style/color"
-            android:src="@drawable/color5"
-            tools:ignore="ContentDescription"
-            android:background="@drawable/sh_circle5"
-            />
+<!--        <ImageView-->
+<!--            android:id="@+id/blue"-->
+<!--            android:src="@drawable/color1"-->
+<!--            tools:ignore="ContentDescription"-->
+<!--            android:background="@drawable/sh_circle1"-->
+<!--            style="@style/color"-->
+<!--            />-->
+<!--        <ImageView-->
+<!--            android:id="@+id/purple"-->
+<!--            android:src="@drawable/color2"-->
+<!--            style="@style/color"-->
+<!--            android:background="@drawable/sh_circle2"-->
+<!--            tools:ignore="ContentDescription" />-->
+<!--        <ImageView-->
+<!--            android:id="@+id/lemon"-->
+<!--            style="@style/color"-->
+<!--            android:src="@drawable/color3"-->
+<!--            tools:ignore="ContentDescription"-->
+<!--            android:background="@drawable/sh_circle3"-->
+<!--            />-->
+<!--        <ImageView-->
+<!--            android:id="@+id/pink"-->
+<!--            style="@style/color"-->
+<!--            android:src="@drawable/color4"-->
+<!--            tools:ignore="ContentDescription"-->
+<!--            android:background="@drawable/sh_circle4"-->
+<!--            />-->
+<!--        <ImageView-->
+<!--            android:id="@+id/yellow"-->
+<!--            style="@style/color"-->
+<!--            android:src="@drawable/color5"-->
+<!--            tools:ignore="ContentDescription"-->
+<!--            android:background="@drawable/sh_circle5"-->
+<!--            />-->
     </LinearLayout>
 
     <!-- Upload button -->

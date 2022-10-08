@@ -108,10 +108,10 @@
     <style name="noteContent">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">@dimen/dp8</item>
-        <item name="android:maxLines">2</item>
+        <item name="android:layout_marginTop">@dimen/dp5</item>
+        <item name="android:maxLines">3</item>
         <item name="android:fontFamily">@font/ibmplexsans_regular</item>
-        <item name="android:textSize">@dimen/sp10</item>
+        <item name="android:textSize">@dimen/sp12</item>
         <item name="android:ellipsize">end</item>
         <item name="android:textColor">@color/white</item>
     </style>
@@ -121,7 +121,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">@font/ibmplexsans_regular</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">@dimen/sp12</item>
+        <item name="android:textSize">@dimen/sp15</item>
         <item name="android:ellipsize">end</item>
         <item name="android:layout_marginStart">@dimen/dp8</item>
     </style>
@@ -139,7 +139,22 @@
     <style name="bottom_images">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginHorizontal">@dimen/dp8</item>
+        <item name="android:layout_marginHorizontal" tools:targetApi="o">@dimen/dp8</item>
         <item name="android:background">@color/foreground</item>
+    </style>
+
+    <style name="back_button">
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_width">@dimen/dp50</item>
+        <item name="android:layout_height">@dimen/dp50</item>
+        <item name="android:layout_marginStart">@dimen/dp16</item>
+        <item name="android:background">@drawable/back_background</item>
+        <item name="android:layout_marginVertical" tools:targetApi="o">@dimen/dp24</item>
+    </style>
+
+    <style name="colors">
+        <item name="android:layout_width">@dimen/dp24</item>
+        <item name="android:layout_height">@dimen/dp24</item>
+        <item name="android:layout_marginStart">@dimen/dp8</item>
     </style>
 </resources>

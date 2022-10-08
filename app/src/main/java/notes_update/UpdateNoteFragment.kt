@@ -1,6 +1,9 @@
 package notes_update
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
+import android.content.Context
+import android.content.res.Resources
 import android.os.Bundle
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
@@ -10,6 +13,7 @@ import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -44,19 +48,51 @@ class UpdateNoteFragment : Fragment() {
         viewModel = ViewModelProvider(requireActivity())[NoteViewModel::class.java]
 
         // Navigation
-        binding.updateBack.setOnClickListener { updateData() }
-        binding.updateEdit.setOnClickListener {
-            clicked = !clicked
-            setVisibility(clicked)
-            setAnimation(clicked)
-            setClickable(clicked)
+        binding.apply {
+            updateBack.setOnClickListener { updateData() }
+
+            updateEdit.setOnClickListener {
+                clicked = !clicked
+                setVisibility(clicked)
+                setAnimation(clicked)
+                setClickable(clicked)
+            }
+
+            updateDelete.setOnClickListener {
+                deleteAlert()
+            }
+
         }
-        binding.updateDelete.setOnClickListener {
-            deleteAlert()
-        }
-        //binding.updateUpload.setOnClickListener {}
+
+        changeNoteColor()
 
         return binding.root
+    }
+
+    @SuppressLint("UseCompatLoadingForDrawables")
+    private fun changeNoteColor() {
+        binding.apply {
+            updateBlue.setOnClickListener {
+                args.currentNote.color = R.drawable.color1
+                Toast.makeText(requireActivity(),"Color has been Changed",Toast.LENGTH_SHORT).show()
+            }
+            updatePink.setOnClickListener {
+                args.currentNote.color = R.drawable.color4
+                Toast.makeText(requireActivity(),"Color has been Changed",Toast.LENGTH_SHORT).show()
+            }
+            updatePurple.setOnClickListener {
+                args.currentNote.color = R.drawable.color2
+                Toast.makeText(requireActivity(),"Color has been Changed",Toast.LENGTH_SHORT).show()
+            }
+            updateLemon.setOnClickListener {
+                args.currentNote.color = R.drawable.color3
+                Toast.makeText(requireActivity(),"Color has been Changed",Toast.LENGTH_SHORT).show()
+            }
+            updateYellow.setOnClickListener {
+                args.currentNote.color = R.drawable.color5
+                Toast.makeText(requireActivity(),"Color has been Changed",Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     private fun updateData() {
@@ -66,7 +102,7 @@ class UpdateNoteFragment : Fragment() {
 
         // if it's not empty
         if(checkNote(title,content)){
-            val note = Notes(args.currentNote.id,title,content)
+            val note = Notes(args.currentNote.id,title,content,args.currentNote.color)
             viewModel.updateNote(note)
             //Toast.makeText(requireContext(),"successfully, updated", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_updateNoteFragment_to_mainFragment)
@@ -83,11 +119,9 @@ class UpdateNoteFragment : Fragment() {
         if (clicked){
             binding.updateDelete.visibility = View.VISIBLE
             binding.updateUpload.visibility = View.VISIBLE
-            binding.updateColorMe.visibility = View.VISIBLE
         }else{
             binding.updateDelete.visibility = View.INVISIBLE
             binding.updateUpload.visibility = View.INVISIBLE
-            binding.updateColorMe.visibility = View.INVISIBLE
         }
     }
 
@@ -95,11 +129,9 @@ class UpdateNoteFragment : Fragment() {
         if (clicked){
             binding.updateDelete.isClickable = true
             binding.updateUpload.isClickable = true
-            binding.updateColorMe.isClickable = true
         }else{
             binding.updateDelete.isClickable = false
             binding.updateUpload.isClickable = false
-            binding.updateColorMe.isClickable = false
         }
     }
 
@@ -108,12 +140,10 @@ class UpdateNoteFragment : Fragment() {
             binding.updateEdit.startAnimation(rotateOpen)
             binding.updateDelete.startAnimation(fromBottom)
             binding.updateUpload.startAnimation(fromAngel)
-            binding.updateColorMe.startAnimation(fromLeft)
         }else{
             binding.updateEdit.startAnimation(rotateClose)
             binding.updateDelete.startAnimation(toBottom)
             binding.updateUpload.startAnimation(toAngel)
-            binding.updateColorMe.startAnimation(toLeft)
         }
     }
 

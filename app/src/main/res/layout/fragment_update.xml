@@ -9,15 +9,52 @@
     >
     <ImageView
         android:id="@+id/update_back"
-        android:padding="@dimen/dp13"
-        android:layout_width="@dimen/dp50"
-        android:layout_height="@dimen/dp50"
-        android:layout_marginStart="@dimen/dp16"
-        android:layout_marginVertical="@dimen/dp24"
         android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"
+        style="@style/back_button" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp16"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/update_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/update_blue"
+            style="@style/colors"
+            android:background="@drawable/color1"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/update_purple"
+            style="@style/colors"
+            android:background="@drawable/color2"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/update_lemon"
+            style="@style/colors"
+            android:background="@drawable/color3"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/update_pink"
+            style="@style/colors"
+            android:background="@drawable/color4"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/update_yellow"
+            style="@style/colors"
+            android:background="@drawable/color5"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
 
     <EditText
         android:id="@+id/update_title"
@@ -57,7 +94,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:tint="@color/white"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/update_delete"
@@ -80,33 +117,30 @@
         android:id="@+id/update_upload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
         android:clickable="true"
         android:contentDescription="@string/upload_image"
         android:focusable="true"
         android:src="@drawable/ic_upload_image"
         android:visibility="invisible"
         app:backgroundTint="@color/lightBlue"
-        app:layout_constraintBottom_toBottomOf="@+id/update_delete"
-        app:layout_constraintEnd_toStartOf="@+id/update_delete"
-        app:layout_constraintStart_toStartOf="@+id/update_color_me"
-        app:layout_constraintTop_toTopOf="@+id/update_delete"
+        app:layout_constraintBottom_toTopOf="@+id/update_delete"
+        app:layout_constraintEnd_toEndOf="@+id/update_delete"
+        app:layout_constraintStart_toStartOf="@+id/update_delete"
         app:tint="@color/white" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/update_color_me"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:visibility="invisible"
-        android:clickable="true"
-        android:focusable="true"
-        app:backgroundTint="@color/lightBlue"
-        android:src="@drawable/ic_color"
-        app:tint="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/update_edit"
-        app:layout_constraintEnd_toStartOf="@+id/update_edit"
-        app:layout_constraintTop_toTopOf="@+id/update_edit"
-        android:contentDescription="@string/color_my_note" />
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/update_color_me"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="5dp"-->
+<!--        android:clickable="true"-->
+<!--        android:background="@drawable/color1"-->
+<!--        android:focusable="true"-->
+<!--        android:src="@drawable/ic_color"-->
+<!--        app:tint="@color/white"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/update_edit"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/update_edit"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/update_edit"-->
+<!--        android:contentDescription="@string/color_my_note" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

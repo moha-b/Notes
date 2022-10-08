@@ -3,6 +3,7 @@ package model
 import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.example.noteapp.R
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
@@ -12,6 +13,6 @@ data class Notes(
     var id: Int,
     var title: String,
     var content: String,
-//    @ColumnInfo(name = "image")
+    var color: Int,
 //    var image: String,
 ): Parcelable

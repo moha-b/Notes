@@ -14,8 +14,5 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.elevation = 0F
 
-
-
-
     }
 }

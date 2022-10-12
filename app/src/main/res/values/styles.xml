@@ -144,9 +144,9 @@
     </style>
 
     <style name="back_button">
-        <item name="android:padding">12dp</item>
-        <item name="android:layout_width">@dimen/dp50</item>
-        <item name="android:layout_height">@dimen/dp50</item>
+        <item name="android:padding">@dimen/dp8</item>
+        <item name="android:layout_width">@dimen/dp30</item>
+        <item name="android:layout_height">@dimen/dp30</item>
         <item name="android:layout_marginStart">@dimen/dp16</item>
         <item name="android:background">@drawable/back_background</item>
         <item name="android:layout_marginVertical" tools:targetApi="o">@dimen/dp24</item>
@@ -155,6 +155,7 @@
     <style name="colors">
         <item name="android:layout_width">@dimen/dp24</item>
         <item name="android:layout_height">@dimen/dp24</item>
-        <item name="android:layout_marginStart">@dimen/dp8</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:layout_marginEnd">@dimen/dp8</item>
     </style>
 </resources>

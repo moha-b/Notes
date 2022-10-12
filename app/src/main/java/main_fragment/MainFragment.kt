@@ -20,7 +20,6 @@ class MainFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View{
         binding = FragmentMainBinding.inflate(layoutInflater)
-
         binding.bottomNavigationBar.background = null
 
         // ViewModel
@@ -28,6 +27,11 @@ class MainFragment : Fragment() {
         viewModel.readAllData.observe(viewLifecycleOwner, Observer { note ->
             adapter.setData(note)
         })
+
+        //search
+//        if (binding.mainSearch.text.isNotEmpty()){
+//            viewModel.search(binding.mainSearch.text.toString())
+//        }
 
         // Navigation
         binding.fab.setOnClickListener { findNavController().navigate(R.id.action_mainFragment_to_addNotes) }
@@ -39,5 +43,4 @@ class MainFragment : Fragment() {
 
         return binding.root
     }
-
 }

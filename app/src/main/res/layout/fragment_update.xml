@@ -72,15 +72,18 @@
         app:layout_constraintTop_toBottomOf="@id/update_title"
         tools:ignore="Autofill" />
 
-    <ImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/update_the_uploaded_image"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        app:riv_corner_radius="@dimen/dp16"
         android:layout_margin="@dimen/dp16"
         app:layout_constraintTop_toBottomOf="@id/update_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="ContentDescription" />
+        />
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/update_edit"

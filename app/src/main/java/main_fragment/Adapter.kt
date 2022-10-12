@@ -2,6 +2,7 @@ package main_fragment
 
 import android.annotation.SuppressLint
 import android.content.res.Resources
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.noteapp.R
 import com.example.noteapp.databinding.NoteLayoutBinding
 import model.Notes
+import java.net.URI
 
 class Adapter: RecyclerView.Adapter<Adapter.MyViewHolder>() {
 
@@ -39,6 +41,8 @@ class Adapter: RecyclerView.Adapter<Adapter.MyViewHolder>() {
             if (item.color != 0) {
                 note.setBackgroundResource(item.color)
             }
+            val uri = Uri.parse(item.image)
+            imageNote.setImageURI(uri)
         }
     }
 

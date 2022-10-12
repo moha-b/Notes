@@ -1,5 +1,6 @@
 package model
 
+import android.net.Uri
 import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -14,5 +15,5 @@ data class Notes(
     var title: String,
     var content: String,
     var color: Int,
-//    var image: String,
+    var image: String,
 ): Parcelable

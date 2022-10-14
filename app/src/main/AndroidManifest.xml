@@ -12,9 +12,9 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:requestLegacyExternalStorage="true"
-        android:icon="@drawable/logo"
+        android:icon="@drawable/mylogo"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logo"
+        android:roundIcon="@drawable/mylogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Noteapp"
         tools:targetApi="31">

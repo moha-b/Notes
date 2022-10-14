@@ -1,4 +1,4 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/create_layout"
@@ -7,6 +7,56 @@
     android:background="@color/background"
     tools:context="notes_create.CreateNoteFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:animateLayoutChanges="true">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp16"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/create_back"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/create_back">
+
+                <ImageView
+                    android:id="@+id/create_blue"
+                    style="@style/colors"
+                    android:background="@drawable/color1"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/create_purple"
+                    style="@style/colors"
+                    android:background="@drawable/color2"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/create_lemon"
+                    style="@style/colors"
+                    android:background="@drawable/color3"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/create_pink"
+                    style="@style/colors"
+                    android:background="@drawable/color4"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/create_yellow"
+                    style="@style/colors"
+                    android:background="@drawable/color5"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
     <ImageView
         android:id="@+id/create_back"
         android:src="@drawable/ic_back"
@@ -45,102 +95,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/create_edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dp30"
-        android:clickable="true"
-        android:focusable="true"
-        android:src="@drawable/ic_edit"
-        app:backgroundTint="@color/lightBlue"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:tint="@color/white"
-        tools:ignore="ContentDescription" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/create_upload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp5"
+        android:layout_margin="@dimen/dp24"
+        android:layout_gravity="end|bottom"
         android:clickable="true"
-        android:contentDescription="@string/upload_image"
         android:focusable="true"
+        app:backgroundTint="@color/lightBlue"
         android:src="@drawable/ic_upload_image"
-        android:visibility="invisible"
-        app:backgroundTint="@color/lightBlue"
-        app:flow_verticalAlign="center"
-        app:layout_constraintBottom_toTopOf="@+id/create_edit"
-        app:layout_constraintEnd_toEndOf="@+id/create_edit"
-        app:layout_constraintStart_toStartOf="@+id/create_edit"
-        app:tint="@color/white" />
-
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/create_color_me"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:visibility="invisible"
-        android:clickable="true"
-        android:focusable="true"
-        app:backgroundTint="@color/lightBlue"
-        android:src="@drawable/ic_color"
         app:tint="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/create_edit"
-        app:layout_constraintEnd_toStartOf="@+id/create_edit"
-        app:layout_constraintTop_toTopOf="@+id/create_edit"
         android:contentDescription="@string/color_my_note" />
 
-    <ImageView
-        android:id="@+id/create_blue"
-        style="@style/colors"
-        android:background="@drawable/color1"
-        app:layout_constraintEnd_toStartOf="@id/create_color_me"
-        app:layout_constraintBottom_toBottomOf="@id/create_color_me"
-        app:layout_constraintTop_toTopOf="@id/create_color_me"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:id="@+id/create_purple"
-        style="@style/colors"
-        android:background="@drawable/color2"
-        app:layout_constraintEnd_toStartOf="@id/create_blue"
-        app:layout_constraintBottom_toBottomOf="@id/create_color_me"
-        app:layout_constraintTop_toTopOf="@id/create_color_me"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:id="@+id/create_lemon"
-        style="@style/colors"
-        android:background="@drawable/color3"
-        app:layout_constraintEnd_toStartOf="@id/create_purple"
-        app:layout_constraintBottom_toBottomOf="@id/create_color_me"
-        app:layout_constraintTop_toTopOf="@id/create_color_me"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:id="@+id/create_pink"
-        style="@style/colors"
-        android:background="@drawable/color4"
-        app:layout_constraintEnd_toStartOf="@id/create_lemon"
-        app:layout_constraintBottom_toBottomOf="@id/create_color_me"
-        app:layout_constraintTop_toTopOf="@id/create_color_me"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:id="@+id/create_yellow"
-        style="@style/colors"
-        android:background="@drawable/color5"
-        app:layout_constraintEnd_toStartOf="@id/create_pink"
-        app:layout_constraintBottom_toBottomOf="@id/create_color_me"
-        app:layout_constraintTop_toTopOf="@id/create_color_me"
-        android:layout_marginEnd="@dimen/dp8"
-        tools:ignore="ContentDescription" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
 

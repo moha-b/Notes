@@ -155,7 +155,6 @@
     <style name="colors">
         <item name="android:layout_width">@dimen/dp24</item>
         <item name="android:layout_height">@dimen/dp24</item>
-        <item name="android:visibility">invisible</item>
         <item name="android:layout_marginEnd">@dimen/dp8</item>
     </style>
 </resources>

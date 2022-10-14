@@ -11,13 +11,15 @@
         android:id="@+id/image_note"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="-1dp"
         android:adjustViewBounds="true"
-        app:riv_corner_radius_top_left="@dimen/dp16"
-        app:riv_corner_radius_top_right="@dimen/dp16"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius_top_left="@dimen/dp16"
+        app:riv_corner_radius_top_right="@dimen/dp16" />
 
     <LinearLayout
         android:layout_width="match_parent"

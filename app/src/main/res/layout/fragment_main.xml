@@ -16,58 +16,82 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+<!--        <com.google.android.material.appbar.AppBarLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:id="@+id/app_bar"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
+
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:id="@+id/toolbar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="?attr/colorPrimary"-->
+<!--                android:minHeight="?attr/actionBarSize"-->
+<!--                app:menu="@menu/search"-->
+<!--                android:theme="?attr/actionBarTheme"-->
+<!--                />-->
+
+<!--        </com.google.android.material.appbar.AppBarLayout>-->
+
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/image_profile"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginStart="@dimen/dp16"
             android:layout_marginTop="@dimen/dp24"
-            android:src="@drawable/me"
+            android:src="@drawable/ic_person"
+            android:padding="@dimen/dp8"
+            android:background="@drawable/circle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:riv_oval="true" />
 
-        <TextView
-            android:id="@+id/userName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp8"
-            android:layout_marginTop="@dimen/dp8"
-            android:fontFamily="@font/ibmplexsans_regular"
-            android:text="Mohab Khalid"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintStart_toEndOf="@+id/image_profile"
-            app:layout_constraintTop_toTopOf="@id/image_profile" />
+<!--        <TextView-->
+<!--            android:id="@+id/userName"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/dp8"-->
+<!--            android:layout_marginTop="@dimen/dp8"-->
+<!--            android:fontFamily="@font/ibmplexsans_regular"-->
+<!--            android:text="Mohab Khalid"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="20sp"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/image_profile"-->
+<!--            app:layout_constraintTop_toTopOf="@id/image_profile" />-->
 
-        <TextView
-            android:id="@+id/email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp8"
-            android:fontFamily="@font/ibmplexsans_regular"
-            android:text="Mohabzax4@gmail.com"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toEndOf="@+id/image_profile"
-            app:layout_constraintTop_toBottomOf="@+id/userName" />
+<!--        <TextView-->
+<!--            android:id="@+id/email"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/dp8"-->
+<!--            android:fontFamily="@font/ibmplexsans_regular"-->
+<!--            android:text="Mohabzax4@gmail.com"-->
+<!--            android:textColor="@color/white"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/image_profile"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/userName" />-->
 
         <LinearLayout
             android:id="@+id/search_bar"
             style="@style/searchBar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/image_profile">
+            app:layout_constraintBottom_toBottomOf="@+id/image_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/image_profile">
 
-            <ImageView
-                android:id="@+id/search_icon"
-                style="@style/searchBarIcon"
-                android:src="@drawable/ic_search"
-                app:tint="@color/white"
-                tools:ignore="ContentDescription" />
+<!--            <ImageView-->
+<!--                android:id="@+id/search_icon"-->
+<!--                style="@style/searchBarIcon"-->
+<!--                android:src="@drawable/ic_search"-->
+<!--                app:tint="@color/white"-->
+<!--                tools:ignore="ContentDescription" />-->
 
-            <EditText
+            <androidx.appcompat.widget.SearchView
                 android:id="@+id/main_search"
                 style="@style/searchBarEditText"
                 android:hint="@string/search"
+                app:searchIcon="@drawable/ic_search"
                 tools:ignore="Autofill" />
         </LinearLayout>
 
@@ -77,14 +101,22 @@
             android:layout_height="0dp"
             android:layoutDirection="inherit"
             android:padding="@dimen/dp8"
-            android:layout_marginBottom="48dp"
             app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/search_bar"
+            app:layout_constraintBottom_toTopOf="@+id/line1"
             app:spanCount="2"
             tools:listitem="@layout/note_layout" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="@dimen/dp50"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

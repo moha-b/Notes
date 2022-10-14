@@ -13,12 +13,14 @@ import model.Notes
 class NoteViewModel(application: Application): AndroidViewModel(application) {
 
     val readAllData: LiveData<List<Notes>>
+    lateinit var searchResult: LiveData<List<Notes>>
     private val repository: Repository
 
     init {
         val userDao = myDatabase.getDatabase(application).dao()
         repository = Repository(userDao)
         readAllData = repository.readAllData
+
     }
 
     fun addNote(note: Notes){
@@ -33,10 +35,9 @@ class NoteViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    fun search(title: String){
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.search(title)
-        }
+    fun search(title: String): LiveData<List<Notes>>{
+        searchResult = repository.search(title)
+        return searchResult
     }
 
     fun deleteNote(note: Notes){

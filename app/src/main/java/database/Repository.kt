@@ -12,7 +12,7 @@ class Repository(private val noteDao: NoteDao) {
         noteDao.addNote(user)
     }
 
-    suspend fun search(search: String): Flow<List<Notes>>{
+    fun search(search: String): LiveData<List<Notes>>{
         return noteDao.search(search)
     }
 

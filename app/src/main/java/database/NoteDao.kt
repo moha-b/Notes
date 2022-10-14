@@ -15,7 +15,7 @@ interface NoteDao {
     fun readAllData(): LiveData<List<Notes>>
 
     @Query("select * from Notes where title like :search")
-    fun search(search: String): Flow<List<Notes>>
+    fun search(search: String): LiveData<List<Notes>>
 
     @Update
     suspend fun updateNote(notes: Notes)

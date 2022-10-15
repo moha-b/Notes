@@ -18,6 +18,7 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigator
 import androidx.navigation.fragment.findNavController
 import com.example.noteapp.R
 import com.example.noteapp.databinding.FragmentCreateNoteBinding
@@ -61,10 +62,12 @@ class CreateNoteFragment : Fragment() {
         binding.createUpload.setOnClickListener {
             pickImageFromGallery()
         }
-
         binding.createTheUploadedImage.setOnClickListener {
             like = 1
             Toast.makeText(requireContext(),"add to fav",Toast.LENGTH_SHORT).show()
+        }
+        binding.maps.setOnClickListener {
+            findNavController().navigate(R.id.action_addNotes_to_mapsFragment)
         }
 
         changeNoteColor()

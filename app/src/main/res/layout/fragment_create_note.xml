@@ -74,13 +74,12 @@
         app:layout_constraintTop_toBottomOf="@id/create_back"
         tools:ignore="Autofill" />
 
-    <EditText
-        android:id="@+id/create_content"
-        style="@style/Content"
-        app:layout_constraintBottom_toTopOf="@id/create_the_uploaded_image"
-        app:layout_constraintStart_toStartOf="@id/create_title"
-        app:layout_constraintTop_toBottomOf="@id/create_title"
-        tools:ignore="Autofill" />
+            <EditText
+                android:id="@+id/create_content"
+                style="@style/Content"
+                app:layout_constraintStart_toStartOf="@id/create_title"
+                app:layout_constraintTop_toBottomOf="@id/create_title"
+                tools:ignore="Autofill" />
 
 
     <com.makeramen.roundedimageview.RoundedImageView
@@ -90,11 +89,22 @@
         android:adjustViewBounds="true"
         app:riv_corner_radius="@dimen/dp16"
         android:layout_margin="@dimen/dp16"
-        app:layout_constraintTop_toBottomOf="@id/create_content"
+        app:layout_constraintTop_toBottomOf="@id/maps"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
 
+            <Button
+                android:id="@+id/maps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp16"
+                android:background="@color/blue"
+                android:backgroundTint="@color/blue"
+                android:text="@string/maps"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/create_content" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
@@ -112,21 +122,3 @@
         android:contentDescription="@string/color_my_note" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
-
-
-    <!--    <LinearLjayout-->
-    <!--        android:id="@+id/create_bottom_sheet_button"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        style="@style/bottomSheet">-->
-
-    <!--        <ImageView-->
-    <!--            android:layout_width="80dp"-->
-    <!--            android:layout_height="@dimen/dp8"-->
-    <!--            android:src="@drawable/bottom_sheet_button"-->
-    <!--            tools:ignore="ContentDescription" />-->
-
-    <!--    </LinearLayout>-->

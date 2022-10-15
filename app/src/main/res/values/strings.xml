@@ -21,4 +21,8 @@
     <string name="delete">Delete Note</string>
     <string name="what_s_in_your_mind">What\'s in your mind ?</string>
     <string name="color_my_note">Color My Note</string>
+    <string name="MAPS_API_KEY">AIzaSyB5mJG589jOg17GrxXtkKVElz8becE5TrM</string>
+    <string name="maps">Maps</string>
+    <string name="map_info">info</string>
+    <string name="save">save</string>
 </resources>

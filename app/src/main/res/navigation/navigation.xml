@@ -39,22 +39,9 @@
             app:popEnterAnim="@anim/from_right"
             app:popExitAnim="@anim/to_left" />
         <action
-            android:id="@+id/action_addNotes_to_bottomSheet"
-            app:destination="@id/bottomSheet" />
+            android:id="@+id/action_addNotes_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
     </fragment>
-
-    <dialog
-        android:id="@+id/bottomSheet"
-        android:name="notes_create.BottomSheet"
-        android:label="fragment_bottom_sheet"
-        tools:layout="@layout/fragment_bottom_sheet" >
-        <action
-            android:id="@+id/action_bottomSheet_to_addNotes"
-            app:destination="@id/addNotes" />
-        <action
-            android:id="@+id/action_bottomSheet_to_updateNoteFragment"
-            app:destination="@id/updateNoteFragment" />
-    </dialog>
 
     <fragment
         android:id="@+id/updateNoteFragment"
@@ -68,11 +55,26 @@
             app:exitAnim="@anim/to_right"
             app:popEnterAnim="@anim/from_right"
             app:popExitAnim="@anim/to_left" />
-        <action
-            android:id="@+id/action_updateNoteFragment_to_bottomSheet"
-            app:destination="@id/bottomSheet" />
         <argument
             android:name="currentNote"
             app:argType="model.Notes" />
+        <action
+            android:id="@+id/action_updateNoteFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="map.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_mapsFragment_to_addNotes"
+            app:destination="@id/addNotes" />
+        <action
+            android:id="@+id/action_mapsFragment_to_updateNoteFragment"
+            app:destination="@id/updateNoteFragment" />
+        <action
+            android:id="@+id/action_mapsFragment_to_addNotes2"
+            app:destination="@id/addNotes" />
     </fragment>
 </navigation>

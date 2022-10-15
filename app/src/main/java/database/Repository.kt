@@ -16,6 +16,10 @@ class Repository(private val noteDao: NoteDao) {
         return noteDao.search(search)
     }
 
+    fun addToFav(): LiveData<List<Notes>>{
+        return noteDao.addToFav()
+    }
+
     suspend fun updateNote(notes: Notes){
         noteDao.updateNote(notes)
     }

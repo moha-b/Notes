@@ -25,18 +25,19 @@ class MainFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View{
         binding = FragmentMainBinding.inflate(layoutInflater)
         binding.bottomNavigationBar.background = null
-        // to Support action bar in Fragment
-        //(activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
 
-        //val menuHost: MenuHost = requireActivity()
-        //menuHost.addMenuProvider(this, viewLifecycleOwner, Lifecycle.State.RESUMED)
+         /*
+        //to Support action bar in Fragment
+        (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
+        val menuHost: MenuHost = requireActivity()
+        menuHost.addMenuProvider(this, viewLifecycleOwner, Lifecycle.State.RESUMED)
+        */
 
         // ViewModel
         viewModel = ViewModelProvider(requireActivity())[NoteViewModel::class.java]
         viewModel.readAllData.observe(viewLifecycleOwner, Observer { note ->
             adapter.setData(note)
         })
-
         // Navigation
         binding.fab.setOnClickListener { findNavController().navigate(R.id.action_mainFragment_to_addNotes) }
 
@@ -44,7 +45,13 @@ class MainFragment : Fragment() {
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
 
-        //
+        binding.imageProfile.setOnClickListener {
+            viewModel.favNotes.observe(viewLifecycleOwner, Observer { fav ->
+                adapter.setData(fav)
+            })
+        }
+
+        // Search bar
         binding.mainSearch.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
 
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -53,16 +60,13 @@ class MainFragment : Fragment() {
                 }
                 return true
             }
-
             override fun onQueryTextChange(query: String?): Boolean {
                 if (query != null){
                     search(query)
                 }
                 return true
             }
-
         })
-
         return binding.root
     }
 

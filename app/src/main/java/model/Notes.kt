@@ -1,10 +1,8 @@
 package model
 
-import android.net.Uri
 import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.noteapp.R
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
@@ -16,4 +14,5 @@ data class Notes(
     var content: String,
     var color: Int,
     var image: String,
+    var love: Int,
 ): Parcelable

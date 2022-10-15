@@ -20,7 +20,6 @@ class NoteViewModel(application: Application): AndroidViewModel(application) {
         val userDao = myDatabase.getDatabase(application).dao()
         repository = Repository(userDao)
         readAllData = repository.readAllData
-
     }
 
     fun addNote(note: Notes){
@@ -45,5 +44,6 @@ class NoteViewModel(application: Application): AndroidViewModel(application) {
             repository.deleteNote(note)
         }
     }
+    var favNotes: LiveData<List<Notes>> = repository.addToFav()
 
 }

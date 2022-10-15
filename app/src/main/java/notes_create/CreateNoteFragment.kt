@@ -31,10 +31,10 @@ class CreateNoteFragment : Fragment() {
     private lateinit var viewModel: NoteViewModel
     private lateinit var binding: FragmentCreateNoteBinding
     private var color = 0
+    var like = 0
     private val startForProfileImageResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
             val resultCode = result.resultCode
             val data = result.data
-
             if (resultCode == Activity.RESULT_OK) {
                 //Image Uri will not be null for RESULT_OK
                 val fileUri = data?.data!!
@@ -62,6 +62,11 @@ class CreateNoteFragment : Fragment() {
             pickImageFromGallery()
         }
 
+        binding.createTheUploadedImage.setOnClickListener {
+            like = 1
+            Toast.makeText(requireContext(),"add to fav",Toast.LENGTH_SHORT).show()
+        }
+
         changeNoteColor()
 
         return binding.root
@@ -84,7 +89,7 @@ class CreateNoteFragment : Fragment() {
         //val image = binding.theUploadedImage
         // if it's not empty
         if(checkNote(title,content)){
-            val note = Notes(0,title,content,color,image)
+            val note = Notes(0,title,content,color,image,like)
             viewModel.addNote(note)
             findNavController().navigate(R.id.action_addNotes_to_mainFragment)
             Toast.makeText(requireContext(),"successfully, created",Toast.LENGTH_SHORT).show()

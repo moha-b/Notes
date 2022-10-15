@@ -61,6 +61,10 @@ class UpdateNoteFragment : Fragment() {
         }
         changeNoteColor()
 
+        binding.updateTheUploadedImage.setOnClickListener {
+            args.currentNote.love = 1
+        }
+
         return binding.root
     }
 
@@ -105,7 +109,7 @@ class UpdateNoteFragment : Fragment() {
 
         // if it's not empty
         if(checkNote(title,content)){
-            val note = Notes(args.currentNote.id,title,content,args.currentNote.color,args.currentNote.image)
+            val note = Notes(args.currentNote.id,title,content,args.currentNote.color,args.currentNote.image,args.currentNote.love)
             viewModel.updateNote(note)
             //Toast.makeText(requireContext(),"successfully, updated", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_updateNoteFragment_to_mainFragment)

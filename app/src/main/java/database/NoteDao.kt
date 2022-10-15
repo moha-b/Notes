@@ -17,6 +17,9 @@ interface NoteDao {
     @Query("select * from Notes where title like :search")
     fun search(search: String): LiveData<List<Notes>>
 
+    @Query("select * from Notes where love like 1")
+    fun addToFav(): LiveData<List<Notes>>
+
     @Update
     suspend fun updateNote(notes: Notes)
 

@@ -8,7 +8,7 @@
        android:paddingTop="@dimen/dp16"
        android:paddingHorizontal="@dimen/dp16"
        >
-       
+
        <androidx.recyclerview.widget.RecyclerView
            android:id="@+id/notes_recycler_view"
            android:layout_width="match_parent"

@@ -1,16 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/rounded_shape"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".fragments.BottomSheetFragment">
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_shape"
+        android:backgroundTint="@color/white_background"
+        android:padding="@dimen/dp16">
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
+        <!-- COLORS -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    </FrameLayout>
+            <View
+                android:id="@+id/view1"
+                style="@style/colors"
+                android:backgroundTint="@color/coffee_color_1"
+                app:layout_constraintEnd_toStartOf="@+id/view2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view2"
+                style="@style/colors"
+                android:backgroundTint="@color/coffee_color_2"
+                app:layout_constraintEnd_toStartOf="@+id/view3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/view1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="@dimen/dp32"
+                android:layout_height="@dimen/dp32"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/coffee_color_3"
+                android:padding="@dimen/dp8"
+                app:layout_constraintEnd_toStartOf="@+id/view4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/view2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view4"
+                style="@style/colors"
+                android:backgroundTint="@color/night_color"
+                app:layout_constraintEnd_toStartOf="@+id/view5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view5"
+                style="@style/colors"
+                android:backgroundTint="@color/purple"
+                app:layout_constraintEnd_toStartOf="@+id/view6"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/view4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view6"
+                style="@style/colors"
+                android:backgroundTint="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/view5"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Upload Image -->
+        <LinearLayout
+            android:id="@+id/add_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center|start"
+            android:layout_marginVertical="@dimen/dp16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="@dimen/dp32"
+                android:layout_height="@dimen/dp32"
+                android:src="@drawable/ic_image"
+                android:contentDescription="@string/image_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_image"
+                android:layout_marginStart="@dimen/dp16"
+                android:textSize="@dimen/sp18"
+                />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

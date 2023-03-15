@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="colors">
+        <item name="android:background">@drawable/circle</item>
+        <item name="android:layout_width">@dimen/dp32</item>
+        <item name="android:layout_height">@dimen/dp32</item>
+        <item name="android:padding">@dimen/dp8</item>
+    </style>
+</resources>

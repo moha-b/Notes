@@ -6,7 +6,7 @@ import com.example.noteme.model.Notes
 @Dao
 interface NotesDoe {
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(note:Notes)
 
     @Update
@@ -17,4 +17,7 @@ interface NotesDoe {
 
     @Query(value = "SELECT * FROM notes WHERE id = :id")
     fun getNote(id:Int): Notes
+
+    @Query(value = "SELECT * FROM notes")
+    fun getAllNote(): List<Notes>
 }

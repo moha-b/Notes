@@ -5,4 +5,7 @@
     <string name="empty_image">Empty Image</string>
     <string name="image_icon">Image Icon</string>
     <string name="upload_image">Upload Image</string>
+    <string name="title">Title</string>
+    <string name="what_s_in_your_mind">What\'s in your mind ...</string>
+    <string name="save_button">Save button</string>
 </resources>

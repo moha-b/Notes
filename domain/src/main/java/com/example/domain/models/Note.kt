@@ -1,3 +1,10 @@
 package com.example.domain.models
 
-data class Note(val id:Int)
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "note")
+data class Note(
+    @PrimaryKey
+    val id:Int
+    )
